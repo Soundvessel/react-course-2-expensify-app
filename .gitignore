@@ -16,8 +16,5 @@ Thumbs.db
 node_modules/
 
 # Built Files
-public/bundle.js
-public/bundle.js.map
-public/styles.css
-public/styles.css.map
+public/dist/
 
