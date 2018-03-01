@@ -12,10 +12,12 @@
 nbproject
 Thumbs.db
 
-# Local Build Tools
-package-lock.json
-yarn.lock
-yarn-error.log
-
 # Folders to ignore
 node_modules/
+
+# Built Files
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
+
