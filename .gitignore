@@ -18,3 +18,7 @@ node_modules/
 # Built Files
 public/dist/
 
+# ENV
+.env.test
+.env.development
+
