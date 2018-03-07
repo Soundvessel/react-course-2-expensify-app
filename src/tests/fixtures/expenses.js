@@ -1,4 +1,5 @@
-import moment from "moment/moment";
+import moment from "moment/moment"
+
 
 export default [
   {
@@ -22,4 +23,4 @@ export default [
     amount: 4500,
     createdAt: moment(0).add(4, 'days').valueOf()
   }
-];
+]

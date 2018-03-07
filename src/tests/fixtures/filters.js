@@ -14,4 +14,4 @@ const altFilters = {
   endDate: moment(0).add(3, 'days')
 }
 
-export { filters, altFilters };
+export { filters, altFilters }

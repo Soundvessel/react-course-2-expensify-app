@@ -1,9 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+
 import { AddExpensePage } from '../../components/AddExpensePage'
 import expenses from '../fixtures/expenses'
 
-let startAddExpense, history, wrapper;
+
+let startAddExpense, history, wrapper
 
 beforeEach(() => {
   startAddExpense = jest.fn()
@@ -16,9 +18,11 @@ beforeEach(() => {
   )
 })
 
+
 test('should render AddExpensePage correctly', () => {
   expect(wrapper).toMatchSnapshot()
 })
+
 
 test('should handle onSubmit', () => {
   wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1])

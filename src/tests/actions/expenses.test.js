@@ -7,11 +7,13 @@ import {
   startRemoveExpense,
   setExpenses,
   startSetExpenses
-} from '../../actions/expenses';
-import expenses from '../fixtures/expenses'
-import configureMockStore from 'redux-mock-store'
+} from '../../actions/expenses'
 import thunk from 'redux-thunk'
 import database from '../../firebase/firebase'
+
+import expenses from '../fixtures/expenses'
+import configureMockStore from 'redux-mock-store'
+
 
 const createMockStore = configureMockStore([thunk])
 
@@ -25,13 +27,15 @@ beforeEach((done) => {
   })
 })
 
+
 test('Should setup remove expense action object', () => {
-  const action = removeExpense({ id: '123abc' });
+  const action = removeExpense({ id: '123abc' })
   expect(action).toEqual({
     type: 'REMOVE_EXPENSE',
     id: '123abc'
-  });
-});
+  })
+})
+
 
 test('should remove expense from firebase', (done) => {
   const store = createMockStore({})
@@ -49,14 +53,16 @@ test('should remove expense from firebase', (done) => {
   })
 })
 
+
 test('should setup edit expense action object', () => {
-  const action = editExpense( '123abc' , { note: 'test'});
+  const action = editExpense( '123abc' , { note: 'test'})
   expect(action).toEqual({
     type: 'EDIT_EXPENSE',
     id: '123abc',
     updates: { note: 'test' }
-  });
-});
+  })
+})
+
 
 test('should edit expenses from firebase', (done) => {
   const store = createMockStore({})
@@ -76,13 +82,15 @@ test('should edit expenses from firebase', (done) => {
   })
 })
 
+
 test('should setup add expense action object with provided values', () => {
-  const action = addExpense(expenses[2]);
+  const action = addExpense(expenses[2])
   expect(action).toEqual({
     type: 'ADD_EXPENSE',
     expense: expenses[2]
-  });
-});
+  })
+})
+
 
 test('should add expense to database and store', (done) => {
   const store = createMockStore({})
@@ -109,6 +117,7 @@ test('should add expense to database and store', (done) => {
   })
 })
 
+
 test('should add expense with defaults to database and store', (done) => {
   const store = createMockStore({})
   const expenseDefaults = {
@@ -134,6 +143,7 @@ test('should add expense with defaults to database and store', (done) => {
   })
 })
 
+
 test('should setup setExpense action object with data', () => {
   const action = setExpenses(expenses)
   expect(action).toEqual({
@@ -141,6 +151,7 @@ test('should setup setExpense action object with data', () => {
     expenses
   })
 })
+
 
 test('should fetch expenses from firebase', (done) => {
   const store = createMockStore({})
