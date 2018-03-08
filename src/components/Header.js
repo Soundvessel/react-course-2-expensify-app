@@ -8,7 +8,7 @@ import { startLogout } from '../actions/auth'
 export const Header = ({ startLogout }) => (
   <header>
     <h1>Expensify</h1>
-    <NavLink to="/" exact activeClassName="is-active">Dashboard</NavLink>&nbsp;
+    <NavLink to="/dashboard" activeClassName="is-active">Dashboard</NavLink>&nbsp;
     <NavLink to="/create" activeClassName="is-active">Create Expense</NavLink>
     <button type="button" onClick={startLogout}>Logout</button>
   </header>
