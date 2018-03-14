@@ -5,8 +5,12 @@ import { startLogin } from '../actions/auth'
 
 
 export const LoginPage = ({ startLogin }) => (
-  <div>
-    <button type="button" onClick={startLogin}>Login</button>
+  <div className="box-layout">
+    <div className="box-layout__box">
+      <h1 className="vox-layout__title">Expensify</h1>
+      <p>It's time ot get your expenses under control.</p>
+      <button type="button" className="btn" onClick={startLogin}>Login with Google</button>
+    </div>
   </div>
 )
 
